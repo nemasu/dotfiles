@@ -24,23 +24,33 @@ if &term =~ "xterm"
  endif
 endif
 
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_auto_refresh_includes = 1
+
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_auto_refresh_includes = 1
+
 let g:syntastic_java_javac_autoload_maven_classpath = 1
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:nerdtree_tabs_open_on_console_startup = 1
 
 let g:EasyMotion_do_mapping = 0
 nmap s <Plug>(easymotion-s)
 nmap s <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
+
+let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeWinSize=40
+
 
 autocmd VimEnter * if &modifiable | NERDTreeFind | wincmd p | endif
