@@ -48,9 +48,12 @@ nmap s <Plug>(easymotion-s)
 nmap s <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeWinSize=40
 
 
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd VimEnter * if &modifiable | NERDTreeFind | wincmd p | endif
