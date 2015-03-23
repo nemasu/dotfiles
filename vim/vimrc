@@ -37,6 +37,7 @@ let g:syntastic_cpp_auto_refresh_includes = 1
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 
+let g:syntastic_java_javac_delete_output = 0
 let g:syntastic_java_javac_autoload_maven_classpath = 1
 
 let g:syntastic_always_populate_loc_list = 1
