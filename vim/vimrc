@@ -60,3 +60,5 @@ let g:NERDTreeWinSize=40
 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd VimEnter * if &modifiable | NERDTreeFind | wincmd p | endif
+
+let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
