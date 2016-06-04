@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+set secure
+set exrc
 set nowrap
 set hidden
 set smarttab
