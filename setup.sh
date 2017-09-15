@@ -31,9 +31,16 @@ if [ ! -e ~/.local/share/fonts ]; then
     mkdir -p ~/.local/share/fonts
 fi
 
-if [ -e ~/.local/share/fonts/Terminess\ Nerd\ Font\ Complete\ Mono.ttf ]; then
-    echo "Terminess font exists already, skipping..."
-else
-    ln -vs $current_dir/fonts/Terminess\ Nerd\ Font\ Complete\ Mono.ttf ~/.local/share/fonts
-fi
+IFS=$'\n'
+fonts=('Knack Regular Nerd Font Complete Mono')
+
+for font in ${fonts[@]}; do
+
+    if [ -e ~/.local/share/fonts/$font.ttf ]; then
+        echo "$font font exists already, skipping..."
+    else
+        ln -vs "$current_dir/fonts/$font.ttf" ~/.local/share/fonts
+    fi
+done
+
 
