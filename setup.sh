@@ -5,7 +5,7 @@ current_dir=`pwd`
 if [ -e ~/.Xresources ]; then
 	echo "~/.Xresources already exists, skipping..."
 else
-    ln -vs $current_dir/X/.Xresources ~/.Xresources
+    ln -vs $current_dir/X/Xresources ~/.Xresources
 fi
 
 
