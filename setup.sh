@@ -2,13 +2,6 @@
 
 current_dir=`pwd`
 
-if [ -e ~/.Xresources ]; then
-	echo "~/.Xresources already exists, skipping..."
-else
-    ln -vs $current_dir/X/Xresources ~/.Xresources
-fi
-
-
 if [ -e ~/.screenrc ]; then
 	echo "~/.screenrc already exists, skipping..."
 else
@@ -26,21 +19,3 @@ if [ -e ~/.vimrc ]; then
 else
     ln -vs $current_dir/vim/vimrc    ~/.vimrc
 fi
-
-if [ ! -e ~/.local/share/fonts ]; then
-    mkdir -p ~/.local/share/fonts
-fi
-
-IFS=$'\n'
-fonts=('Knack Regular Nerd Font Complete Mono')
-
-for font in ${fonts[@]}; do
-
-    if [ -e ~/.local/share/fonts/$font.ttf ]; then
-        echo "$font font exists already, skipping..."
-    else
-        ln -vs "$current_dir/fonts/$font.ttf" ~/.local/share/fonts
-    fi
-done
-
-
