@@ -28,6 +28,8 @@ if &term =~ "xterm"
  endif
 endif
 
+let &t_ut=''
+
 let NERDTreeDirArrowExpandable = "▶"
 let NERDTreeDirArrowCollapsible = "▼"
 
